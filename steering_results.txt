@@ -1,0 +1,17 @@
+Using device: mps
+Loading GPT-2 Small...
+Loaded pretrained model gpt2-small into HookedTransformer
+Calculating steering vector...
+
+--- Baseline Generation ---
+Baseline: I went to the restaurant and the food was ok. The front and back were still filled with my favorite beers. I ordered some bacon and some
+
+--- Steered Generation (Positive) ---
+Steered (+ Positive): I went to the restaurant and the food was ok. The front and back were still nice and clean. The service was great, and the place
+
+--- Steered Generation (Negative) ---
+Steered (- Negative): I went to the restaurant and the food was ok. The front door was open so you could see the beer cans exiting and they were all in
+
+--- Conclusion ---
+By simply adding a 'sentiment' vector to the model's internal residual stream at layer 6,
+we successfully steered the model's generated text without modifying its prompt or parameters.
